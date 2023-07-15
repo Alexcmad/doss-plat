@@ -26,7 +26,7 @@ def main():
     print(alex == 69)
     doss = Student(name="Doss", age=18, grade=15, ID=20031)"""
     # comment
-    # second comment
+    # second comm ent
     add_student()
 
 
