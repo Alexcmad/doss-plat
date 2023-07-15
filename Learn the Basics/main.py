@@ -38,6 +38,8 @@ Use built-in functions such as len(), input(), str(), int(), etc., as needed thr
 def main():
     print ("Hello World")
     print ("Doss loves you")
+    print ("Hitler was right")
+
 
 
 if __name__ == "__main__":
