@@ -36,6 +36,7 @@ Use built-in functions such as len(), input(), str(), int(), etc., as needed thr
 
 
 def main():
+    print("alex", 7)
     pass
 
 
