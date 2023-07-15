@@ -36,8 +36,8 @@ Use built-in functions such as len(), input(), str(), int(), etc., as needed thr
 
 
 def main():
-    print("alex", 7)
-    pass
+    print ("Hello World")
+    print ("Doss loves you")
 
 
 if __name__ == "__main__":
