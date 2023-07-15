@@ -40,9 +40,9 @@ def get_student():
             print(student.name,student.age,student.grade,student.id)
             input("press enter to continue")
             return student
-        else:
-            print("student not on record")
-            input("press enter to continue")
+
+    print("student not on record")
+    input("press enter to continue")
 
 
 
