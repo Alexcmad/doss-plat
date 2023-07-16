@@ -1,4 +1,8 @@
+from exceptions import InvalidOptionException
+
 students_list = []
+
+
 
 
 class Student:
@@ -21,13 +25,38 @@ class Student:
 
 
 def main():
-    """
-    alex = Student(name="alexander", age=20, grade=2, ID=69)
-    print(alex == 69)
-    doss = Student(name="Doss", age=18, grade=15, ID=20031)"""
-    # comment
-    # second comm ent
-    add_student()
+    function_dict = {
+        1: add_student,
+        2: get_student
+    }
+
+    choice = 0
+
+    print("Welcome to the Python Roadmap School Admin System")
+
+    def display_options():
+        selection = input("What would you like to do?:\n"
+                          "1) Add a student record\n"
+                          "2) Get a student by ID\n"
+                          "3) Update a student record by ID\n"
+                          "4) Delete a student record by ID\n"
+                          "5) View all student records\n"
+                          "6) Exit program\n"
+                          "Please enter the option you would like to choose: ")
+        return selection
+
+    try:
+        choice = int(display_options())
+        if choice > 6 or choice <= 0:
+            raise InvalidOptionException
+    except (InvalidOptionException, ValueError):
+        input("Invalid Option, please try again\n"
+              "Press enter to continue...")
+        choice = display_options()
+
+    chosen_function = function_dict.get(choice)
+    chosen_function()
+    main()
 
 
 def add_student():
