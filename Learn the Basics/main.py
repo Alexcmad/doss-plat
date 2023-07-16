@@ -60,10 +60,14 @@ def get_student():
 
 
 def print_student_info(student):
-    print(student.name, student.age, student.grade, student.id)
+    print(student.name, student.age, student.grade, student.id )
 
 
 
+def print_all_records():
+    for student in students_list:
+        print_student_info()
+    return
 
 
 
