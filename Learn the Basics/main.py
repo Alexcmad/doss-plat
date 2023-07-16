@@ -3,10 +3,8 @@ from exceptions import InvalidOptionException
 students_list = []
 
 
-
-
 class Student:
-    school = "Crawsis"
+    school = "UA"
 
     def __init__(self, name: str, age: int, grade: float, ID: int):
         self.name = name
