@@ -26,9 +26,17 @@ def main():
     print(alex == 69)
     doss = Student(name="Doss", age=18, grade=15, ID=20031)"""
     # comment
-    # second comm ent
+    # second comment
     add_student()
+    input("Press Enter to Continue...")
+    choice=input("\nEnter 1 to add another student\nEnter 0 to exit \n" )
+    choice=int(choice)
 
+    if choice==1:
+        add_student()
+
+    else:
+        exit()
 
 def add_student():
     student_name=input("Enter Student Name ")
