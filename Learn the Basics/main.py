@@ -72,7 +72,7 @@ def get_student():
 
     for student in students_list:
         if student_id == student.ID:
-            print(student.name, student.age, student.grade, student.id)
+            print(student.name, student.age, student.grade, student.ID)
             input("press enter to continue")
             return student
 
@@ -83,12 +83,12 @@ def get_student():
 
 
 def print_student_info(student):
-    print(student.name, student.age, student.grade, student.id )
+    print(student.name, student.age, student.grade, student.ID )
 
 
 def print_all_records():
     for student in students_list:
-        print_student_info()
+        print_student_info(student)
 
 
 if __name__ == "__main__":
