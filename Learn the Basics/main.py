@@ -43,16 +43,19 @@ if __name__ == "__main__":
     main()
 
 def get_student():
-    student_id = input("What is the id of the student you want to find?")
+    student_id = int(input("What is the id of the student you want to find?"))
 
     for student in students_list:
         if student_id == student.ID:
             print(student.name,student.age,student.grade,student.id)
-            input("press enter to continue")
-            return student
 
-    print("student not on record")
-    input("press enter to continue")
+
+
+    choice = input("press enter to continue or s to search again")
+    if choice == "s":
+        get_student()
+    else:
+        return
 
 
 
