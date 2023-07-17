@@ -68,7 +68,7 @@ def add_student():
 
 
 def get_student():
-    student_id = input("What is the id of the student you want to find?")
+    student_id = int(input("What is the id of the student you want to find?"))
 
     for student in students_list:
         if student_id == student.ID:
@@ -76,12 +76,19 @@ def get_student():
             input("press enter to continue")
             return student
 
-    print("student not on record")
-    input("press enter to continue")
+    choice = input("press enter to continue or s to search again")
+    if choice.lower() == "s":
+        get_student()
+
 
 
 def print_student_info(student):
-    print(student.name, student.age, student.grade, student.id)
+    print(student.name, student.age, student.grade, student.id )
+
+
+def print_all_records():
+    for student in students_list:
+        print_student_info()
 
 
 if __name__ == "__main__":
