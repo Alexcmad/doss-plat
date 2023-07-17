@@ -52,10 +52,9 @@ def get_student():
 
 
     choice = input("press enter to continue or s to search again")
-    if choice == "s":
+    if choice.lower() == "s":
         get_student()
-    else:
-        return
+
 
 
 
@@ -70,7 +69,7 @@ def print_student_info(student):
 def print_all_records():
     for student in students_list:
         print_student_info()
-    return
+
 
 
 
