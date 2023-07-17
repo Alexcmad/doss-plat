@@ -85,7 +85,7 @@ def get_student():
 
 
 def print_student_info(student):
-    print(student.name, student.age, student.grade, student.ID)
+    print(student.name, student.age, student.grade, student.ID )
 
 
 def print_all_records():
