@@ -85,10 +85,27 @@ def print_student_info(student):
 
 
 def print_all_records():
+    student_count = 0
     for student in students_list:
         print_student_info(student)
+        student_count = student_count + 1
+    print("The number of students on record is : ",student_count)
 
+def delete_student():
+    student_id = input("What is the id of the student you want to remove?")
 
+    for student in students_list:
+        if student_id == student.ID:
+            print(student.name, student.age, student.grade, student.ID)
+            choice = input("press k to delete record or anything else to cancel")
+            if choice.lower() == "k":
+                index = students_list.index(student)
+                students_list.pop(index)
+                print("record deleted")
+            return student
+
+    print("student not on record")
+    input("press enter to continue")
 
 if __name__ == "__main__":
     main()
