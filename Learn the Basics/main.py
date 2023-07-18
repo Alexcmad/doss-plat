@@ -72,7 +72,7 @@ def get_student():
 
     for student in students_list:
         if student_id == student.ID:
-            print_student_info(student)
+            student.print_info()
             input("press enter to continue")
             return student
 
