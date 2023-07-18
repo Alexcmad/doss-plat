@@ -92,10 +92,10 @@ def add_student():
 
 def find_student_by_id():
     student_id = input("What is the id of the student you want to find?: ")
-    student = get_student(student_id)
+    student: Student = get_student(student_id)
 
     if student:
-        print(student)
+        student.print_info()
 
     choice = input("Press enter to continue or s to search again: ")
     if choice.lower() == "s":
@@ -104,7 +104,7 @@ def find_student_by_id():
 
 def update_student_record():
     student_id = input("Please enter the ID of the student whose record you wish to update: ")
-    student = get_student(student_id)
+    student: Student = get_student(student_id)
 
     if student:
         student.print_info()
