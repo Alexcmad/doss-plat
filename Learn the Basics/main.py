@@ -28,15 +28,7 @@ def main():
     # comment
     # second comment
     add_student()
-    input("Press Enter to Continue...")
-    choice=input("\nEnter 1 to add another student\nEnter 0 to exit \n" )
-    choice=int(choice)
 
-    if choice==1:
-        add_student()
-
-    else:
-        exit()
 
 def add_student():
     student_name=input("Enter Student Name ")
@@ -46,6 +38,8 @@ def add_student():
 
     new_student=Student(name=student_name,age=student_age,grade=student_grade,ID=student_id )
     students_list.append(new_student)
+
+    input("Press Enter to Exit")
 
 if __name__ == "__main__":
     main()
