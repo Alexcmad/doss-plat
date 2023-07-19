@@ -127,15 +127,35 @@ def enter_continue():
 
 def get_student(student_id: str):
     for student in students_list:
+
+        if student_id == student.ID:
+            student.print_info()
+            input("press enter to continue")
+
         if int(student_id) == student.ID:
+
             return student
     print(f"Student with ID of {student_id} not found")
 
 
 def print_all_records():
+    student_count = 0
     for student in students_list:
-        student.print_info()
-    enter_continue()
+
+        print_student_info(student)
+        student_count = len(students_list)
+    print(f"The number of students on record is : {student_count}")
+
+def delete_student():
+    get_student()
+    choice = input("press k to delete record or anything else to cancel")
+    if choice.lower() == "k":
+        index = students_list.index(student)
+        students_list.pop(index)
+        print("record deleted")
+    return
+
+
 
 
 if __name__ == "__main__":
